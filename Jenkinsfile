@@ -3,6 +3,7 @@ pipeline {
     triggers{
         cron('H/15 * * * *')
     }
+    stages{
         stage('Build Docker Image') {
             steps {
                 script {
