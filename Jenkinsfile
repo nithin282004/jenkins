@@ -1,7 +1,8 @@
 pipeline {
     agent any
-
-    stages {
+    triggers{
+        cron('H/15 * * * *')
+    }
         stage('Build Docker Image') {
             steps {
                 script {
